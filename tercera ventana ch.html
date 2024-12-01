@@ -1,0 +1,532 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAGINA DE CHIVAS</title>
+    <style>
+        /* General Reset */
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+            background-color: #faf9f6;
+        }
+
+        /* Announcement Bar */
+        .announcement-bar {
+            text-align: center;
+            background-color: #0a141d;
+            color: #ffffff;
+            padding: 10px;
+            font-size: 12px;
+        }
+
+        .announcement-bar a {
+            color: #0a141d;
+            text-decoration: underline;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            background-color: #EB0501;
+            border-bottom: 1px solid #ffffff;
+        }
+
+        header .logo {
+            height: 40px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+        }
+
+        .nav-icons {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .nav-icons a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 16px;
+        }
+
+        .nav-icons a:hover {
+            color: #ffffff;
+        }
+
+        .icon {
+            width: 20px;
+            height: 20px;
+        }
+
+        /* Footer */
+        /* Subscription Section */
+        .subscription-section {
+            background-color: #E00600;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .subscription-section h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .subscription-section p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .subscription-section p span {
+            font-weight: bold;
+        }
+
+        .subscription-section input[type="email"] {
+            padding: 10px;
+            width: 300px;
+            max-width: 100%;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .subscription-section button {
+            padding: 10px 20px;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .subscription-section button:hover {
+            background-color: #333;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #0a141d;
+            color: #fff;
+            padding: 40px 20px;
+        }
+
+        footer .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        footer .footer-left {
+            flex: 1;
+            min-width: 200px;
+            margin-bottom: 20px;
+        }
+
+        footer .footer-left img {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+
+        footer .footer-left p {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        footer .footer-links {
+            flex: 1;
+            min-width: 200px;
+            margin-bottom: 20px;
+        }
+
+        footer .footer-links h3 {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        footer .footer-links ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        footer .footer-links ul li {
+            margin-bottom: 8px;
+        }
+
+        footer .footer-links ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        footer .footer-links ul li a:hover {
+            text-decoration: underline;
+        }
+
+        footer .footer-bottom {
+            text-align: center;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+
+        footer .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        footer .social-icons a {
+            color: #fff;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        footer .social-icons a:hover {
+            color: #E00600;
+        }
+        
+        .social-icons a img:hover {
+        transform: scale(1.1); 
+    }
+}
+ /* Banner Section */
+        /* Banner */
+        .banner {
+        position: relative;
+        text-align: left; 
+    }
+
+    .banner img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+    }
+
+    .banner h1 {
+        position: absolute;
+        top: 50%;
+        left: 20px; 
+        transform: translateY(-50%); 
+        font-size: 30px;
+        font-weight: bold;
+        color: #fff; 
+        text-transform: uppercase;
+        padding: 20px 40px;
+        border-top: 3px solid #fff; 
+    }
+
+        /* Filter Section */
+        .filter-section {
+    display: flex;
+    justify-content: center;  
+    align-items: center;     
+    max-width: 1200px;      
+    margin: 20px auto;       
+    padding: 0 20px;         
+    gap: 20px;              
+}
+
+        .filter-section select,
+        .filter-section input[type="email"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .filter-section button {
+          align-items: center;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        /* Articles Section */
+        .articles {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .article {
+            background-color: #fff;
+            border: 1px solid #e6e6e6;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .article img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .article-content {
+            padding: 20px;
+        }
+
+        .article-content h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .article-content p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .article-content a {
+            text-decoration: none;
+            font-size: 14px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        /* Pagination */
+      .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 10px;
+    font-family: Arial, sans-serif;
+}
+
+.pagination a {
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    color: #333;
+    cursor: pointer;
+}
+
+.pagination a.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.pagination .page-info {
+    font-size: 14px;
+    color: #666;
+}
+    </style>
+</head>
+<body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        ¿Enviar regalos directamente a tus seres queridos este año? Infórmate de nuestro servicio de Envoltura de Regalos <a href="#" style="color:#ffffff">aquí</a>.
+    </div>
+
+    <!-- Header -->
+    <header>
+        <!-- Logo -->
+        <img src="https://logodownload.org/wp-content/uploads/2020/06/chivas-guadalajara-logo.png" alt="Logo" class="logo">
+
+        <!-- Navigation Links -->
+        <nav>
+            <a href="#">INICIO</a>
+            <a href="#">PRODUCTOS</a>
+            <a href="#">HISTORIA</a>
+            <a href="#">ACERCA DE</a>
+        </nav>
+        <!-- Navigation Icons -->
+        <div class="nav-icons">
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png" alt="Account Icon" class="icon"></a>
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/3144/3144456.png" alt="Cart Icon" class="icon"></a>
+        </div>
+    </header>
+    
+     <!-- Banner -->
+    <div class="banner">
+        <img src="https://i.pinimg.com/736x/1e/d8/c7/1ed8c7daf2b02eadc173b3f321e66b8c.jpg" alt="Tea Field">
+        <h1>Productos & destacados</h1>
+    </div>
+
+    <!-- Filter Section -->
+    <div class="filter-section">
+        <select>
+<option>Todos los temas</option>
+<option>Camisetas oficiales</option>
+<option>Gorras y accesorios</option>
+<option>Ediciones especiales</option>
+<option>Ropa deportiva</option>
+<option>Promociones</option>
+<option>Novedades</option>
+
+        </select>
+        <div>
+            <input type="email" placeholder="Dirección de correo electrónico">
+            <button>Envíar</button>
+        </div>
+    </div>
+
+    <!-- Articles -->
+    <!-- Articles Section -->
+<section class="articles">
+    <div class="article">
+        <img src="https://cdn11.bigcommerce.com/s-f13ae7le0r/images/stencil/960w/products/1254/2916/BALON_SS150_CHIVAS_V3890_CDG_ROJI_BLANCO__77247.1730596162.png?c=1">
+        <div class="article-content">
+<p>Chivas SKU: 907204789MX</p>
+<hr>
+<h3>BALÓN ESCUDO CHIVAS ROJI BLANCO</h3>
+            <p>$275.00</p>
+            <a href="#">→</a>
+        </div>
+    </div>
+    <div class="article">
+        <img src="https://cdn11.bigcommerce.com/s-f13ae7le0r/images/stencil/960w/products/1253/2915/BALON_SS100_CHIVAS_V3889_CDG_BLANCO__83227.1730595689.png?c=1" alt="Jasmine Arnold Palmer">
+        <div class="article-content">
+            <p>Chivas SKU: 907204011MX</p>
+            <hr>
+            <h3>BALÓN ESCUDO CHIVAS TEXTURAS TRICOLOR</h3>
+            <p>$275.00</p>
+            <a href="#">→</a>
+        </div>
+    </div>
+</section>
+
+<!-- Pagination -->
+<section class="articles"></section>
+
+<div class="pagination">
+    <a href="#" class="prev">←</a>
+    <span class="page-info">Page 1 of 9</span>
+    <a href="#" class="next">→</a>
+</div>
+
+<br>
+     <!-- Footer -->
+<footer>
+    <!-- Footer Section -->
+    <div class="footer-container">
+        <!-- Left Section -->
+        <div class="footer-left">
+            <img src="https://logodownload.org/wp-content/uploads/2020/06/chivas-guadalajara-logo.png" alt="Logo Chivas">
+            <p>Sede central: Guadalajara, Jalisco, México.</p>
+            <p>Teléfono: 33 1234 5678</p>
+            <p><a href="mailto:ventas@chivasstore.com" style="color: #F6937A;">ventas@chivasstore.com</a></p>
+        </div>
+
+        <!-- Links Section -->
+        <div class="footer-links">
+        <br>
+            <h3>Acerca de Nosotros</h3>
+            <ul>
+                <li><a href="#">Historia de Chivas</a></li>
+                <li><a href="#">Productos Oficiales</a></li>
+                <li><a href="#">Contáctanos</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-links">
+        <br>
+            <h3>Información</h3>
+            <ul>
+                <li><a href="#">Envíos</a></li>
+                <li><a href="#">Política de Privacidad</a></li>
+                <li><a href="#">Términos y Condiciones</a></li>
+            </ul>
+        </div>
+    </div>
+
+   <!-- Bottom Section -->
+<div class="footer-bottom">
+    <div class="social-icons" style="text-align: center; padding: 20px;">
+        <a href="#" style="margin: 0 10px; display: inline-block;">
+            <img src="https://i.pinimg.com/736x/25/ea/59/25ea5941311b06c6cec08f99bf5d72a5.jpg" alt="Facebook" style="width: 30px; height: 30px; transition: transform 0.3s ease;">
+        </a>
+        <a href="#" style="margin: 0 10px; display: inline-block;">
+            <img src="https://i.pinimg.com/736x/f4/1e/2d/f41e2dab621c1ee5253cef74e3642fcf.jpg" alt="Instagram" style="width: 30px; height: 30px; transition: transform 0.3s ease;">
+        </a>
+        <a href="#" style="margin: 0 10px; display: inline-block;">
+            <img src="https://i.pinimg.com/736x/b2/68/83/b268838fe5a0c0ca504c2fc103843ae3.jpg" alt="Twitter" style="width: 30px; height: 30px; transition: transform 0.3s ease;">
+        </a>
+        <a href="#" style="margin: 0 10px; display: inline-block;">
+            <img src="https://i.pinimg.com/736x/3d/c2/86/3dc286aa8881c5c3f944f86ef3182223.jpg" alt="YouTube" style="width: 30px; height: 30px; transition: transform 0.3s ease;">
+        </a>
+    </div>
+</div>
+</footer>
+
+<p>&copy; 2024 CHIVAS. Todos los derechos reservados.</p>
+<script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const totalPages = 9; // Total de páginas
+            let currentPage = 1; // Página actual
+
+            const prevButton = document.querySelector(".pagination .prev");
+            const nextButton = document.querySelector(".pagination .next");
+            const pageInfo = document.querySelector(".pagination .page-info");
+
+            // Actualizar la paginación
+            function updatePagination() {
+                pageInfo.textContent = `Page ${currentPage} of ${totalPages}`;
+                prevButton.classList.toggle("disabled", currentPage === 1);
+                nextButton.classList.toggle("disabled", currentPage === totalPages);
+            }
+
+            // Cambiar de página
+            function changePage(direction) {
+                if (direction === "prev" && currentPage > 1) {
+                    currentPage--;
+                } else if (direction === "next" && currentPage < totalPages) {
+                    currentPage++;
+                }
+                updatePagination();
+                loadArticles(currentPage); // Simular carga de artículos
+            }
+
+            // Simular carga de artículos
+            function loadArticles(page) {
+                console.log(`Cargando artículos de la página ${page}`);
+                // Aquí puedes agregar lógica para cambiar el contenido de los artículos
+            }
+
+            // Event listeners para los botones
+            prevButton.addEventListener("click", () => changePage("prev"));
+            nextButton.addEventListener("click", () => changePage("next"));
+
+            // Inicializar la paginación
+            updatePagination();
+        });
+    </script>
+</body>
+</html>

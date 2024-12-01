@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAGINA DE CHIVAS</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+            background-color: #faf9f6;
+        }
+
+        /* Announcement Bar */
+        .announcement-bar {
+            text-align: center;
+            background-color: #0a141d;
+            color: #ffffff;
+            padding: 10px;
+            font-size: 12px;
+        }
+
+        .announcement-bar a {
+            color: #0a141d;
+            text-decoration: underline;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            background-color: #EB0501;
+            border-bottom: 1px solid #ffffff;
+        }
+
+        header .logo {
+            height: 40px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+        }
+
+        .nav-icons {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .nav-icons a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 16px;
+        }
+
+        .nav-icons a:hover {
+            color: #ffffff;
+        }
+
+        .icon {
+            width: 20px;
+            height: 20px;
+        }
+
+        /* Banner */
+        .banner {
+        position: relative;
+        text-align: left; /* Texto alineado a la izquierda */
+    }
+
+    .banner img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+    }
+
+    .banner h1 {
+        position: absolute;
+        top: 50%;
+        left: 20px; /* Ajusta el valor para mover el texto más a la izquierda */
+        transform: translateY(-50%); /* Centra verticalmente */
+        font-size: 48px;
+        font-weight: bold;
+        color: #fff; /* Texto blanco */
+        text-transform: uppercase;
+        padding: 20px 40px;
+        border-top: 3px solid #fff; /* Línea blanca encima del texto */
+    }
+        
+        /* Text Section */
+        .text-section {
+            width: 60%;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .text-section a {
+            color: #000;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .text-section a:hover {
+            text-decoration: underline;
+        }
+
+        /* Login Section */
+        .login-section {
+            width: 90%;
+            text-align: right;
+        }
+
+        .login-section h3 {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .login-section a {
+            display: inline-block;
+            text-decoration: none;
+            color: #000;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 10px 20px;
+            border: 2px solid #000;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .login-section a:hover {
+            background-color: #000;
+            color: #fff;
+        }
+
+        /* Why Work With Us Section */
+        .why-work {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+    text-align: center; /* Centra el texto dentro de la sección */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos hijos horizontalmente */
+    justify-content: center; /* Alinea verticalmente, si es necesario */
+}
+
+
+        .why-work h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .why-work-content {
+            display: flex;
+            gap: 30px;
+        }
+
+        .why-work-content img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .why-work-text {
+            flex: 1;
+            font-size: 16px;
+            line-height: 1.6;
+            text-align: left;
+        }
+/* Features Section */
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas en el grid */
+    gap: 30px;
+    margin: 50px 20px;
+    max-width: 1200px;
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+    padding: 20px;
+    justify-items: center; /* Centra las columnas dentro del grid */
+    align-items: center; /* Centra los elementos verticalmente */
+    min-height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
+    box-sizing: border-box; /* Asegura que el padding no afecte al ancho total */
+    text-align: center; /* Centra el texto */
+}
+
+.feature {
+    text-align: center;
+    padding: 20px;
+}
+
+.feature img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.feature h3 {
+    margin: 15px 0 10px;
+    font-size: 18px;
+}
+
+.feature p {
+    font-size: 14px;
+    color: #666;
+}
+
+.feature img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(255, 0, 0, 0.6);
+}
+
+        /* Contact Section */
+        .contact-section {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .contact-text {
+            flex: 1;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .contact-form {
+            flex: 1;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #e6e6e6;
+            border-radius: 5px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .contact-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #0a141d;
+            color: #fff;
+            border: none;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        /* Footer */
+        /* Subscription Section */
+        .subscription-section {
+            background-color: #E00600;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .subscription-section h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .subscription-section p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .subscription-section p span {
+            font-weight: bold;
+        }
+
+        .subscription-section input[type="email"] {
+            padding: 10px;
+            width: 300px;
+            max-width: 100%;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .subscription-section button {
+            padding: 10px 20px;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .subscription-section button:hover {
+            background-color: #333;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #000;
+            color: #fff;
+            padding: 40px 20px;
+        }
+
+        footer .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        footer .footer-left {
+            flex: 1;
+            min-width: 200px;
+            margin-bottom: 20px;
+        }
+
+        footer .footer-left img {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+
+        footer .footer-left p {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        footer .footer-links {
+            flex: 1;
+            min-width: 200px;
+            margin-bottom: 20px;
+        }
+
+        footer .footer-links h3 {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        footer .footer-links ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        footer .footer-links ul li {
+            margin-bottom: 8px;
+        }
+
+        footer .footer-links ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        footer .footer-links ul li a:hover {
+            text-decoration: underline;
+        }
+
+        footer .footer-bottom {
+            text-align: center;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+
+        footer .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        footer .social-icons a {
+            color: #fff;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        footer .social-icons a:hover {
+            color: #E00600;
+        }
+        
+        .social-icons a img:hover {
+        transform: scale(1.1); /* Efecto de zoom al pasar el ratón */
+    }
+}
+
+    </style>
+</head>
+<body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        ¿Enviar regalos directamente a tus seres queridos este año? Infórmate de nuestro servicio de Envoltura de Regalos <a href="#" style="color:#ffffff">aquí</a>.
+    </div>
+
+    <!-- Header -->
+    <header>
+        <!-- Logo -->
+        <img src="https://logodownload.org/wp-content/uploads/2020/06/chivas-guadalajara-logo.png" alt="Logo" class="logo">
+
+        <!-- Navigation Links -->
+        <nav>
+            <a href="#">INICIO</a>
+            <a href="#">PRODUCTOS</a>
+            <a href="#">HISTORIA</a>
+            <a href="#">ACERCA DE</a>
+        </nav>
+
+        <!-- Navigation Icons -->
+        <div class="nav-icons">
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png" alt="Account Icon" class="icon"></a>
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/3144/3144456.png" alt="Cart Icon" class="icon"></a>
+        </div>
+    </header>
+
+    <!-- Banner -->
+    <div class="banner">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Estadio_Akron_interior_0319.jpg">
+        <h1>CHIVAS / TAPATÍO</h1>
+    </div>
+     <!-- Text Section -->
+        <div class="text-section">
+            <p> <br><br>
+    Chivas, el equipo más representativo del fútbol mexicano, ha forjado un legado de pasión y éxito a lo largo de los años. 
+    Como socio o patrocinador, tendrás la oportunidad de unirte a una comunidad única que vibra con cada gol y cada jugada.
+</p>
+<p>
+    Para más información sobre cómo colaborar con nosotros, contáctanos a través del correo 
+    <a href="mailto:patrocinios@chivas.com">patrocinios@chivas.com</a> o llena el formulario de contacto que encontrarás más abajo.
+</p>
+        </div>
+
+        <!-- Login Section -->
+        <div class="login-section">
+            <h3>¿Eres abonado rojiblanco?</h3>
+<a href="#">Accede a tus beneficios aquí →</a>
+    </div>
+
+     <!-- Why Work With Us -->
+    <section class="why-work">
+        <h2>¿Qué productos puedes encontrar?</h2>
+        <div class="why-work-content">
+<p class="why-work-text">
+  "Vive la pasión, lleva los colores,<br>
+  Con Chivas en el alma y en tus amores.<br>
+  Camisetas, gorras y más emoción,<br>
+  Todo lo que necesitas para alentar al campeón."
+</p>
+<img src="https://i.pinimg.com/736x/a5/dc/72/a5dc72a0463bf986af9bcd8d9a0d243c.jpg" alt="Producto Chivas" style="width: 40%; max-width: 400px; height: auto; border: 4px solid #333; border-radius: 10px; transition: transform 0.3s ease, box-shadow 0.3s ease; display: inline-block; margin-right: 10px;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 4px 15px rgba(0, 0, 0, 0.3)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';"> </div>
+
+<div class="login-section" style="text-align: left; display: inline-block; vertical-align: middle; position: relative; display: inline-block;">
+    <a href="#">Accede a tus beneficios aquí →</a>
+</div>
+
+    </section>
+
+ 
+ <!-- Features -->
+<section class="features" style="display: flex; justify-content: center; align-items: center; gap: 30px; padding: 20px;">
+    <div class="feature" style="text-align: center;">
+        <img src="https://cdn11.bigcommerce.com/s-f13ae7le0r/images/stencil/300x300/products/1177/2737/PLAYERA_RAYADA_PROMO_P6187_A24__12416.1717700540.jpg?c=1" alt="Jersey Chivas" style="border: 3px solid #ff0000; border-radius: 15px; box-shadow: 0 4px 20px rgba(255, 0, 0, 0.6); transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; width: 100%; max-width: 300px; height: auto;">
+        <h3>JERSEY CHIVAS LOCAL PROMO AP24</h3>
+        <p>Puma<br>
+        $2,699.00<br>
+        <strong>Ancho:</strong> 28.00 (cm)<br>
+        <strong>Altura:</strong> 1.00 (cm)<br>
+        <strong>Profundidad:</strong> 27.00 (cm)
+        </p>
+    </div>
+    
+    <div class="feature" style="text-align: center;">
+        <img src="https://cdn11.bigcommerce.com/s-f13ae7le0r/images/stencil/300x300/products/1196/2760/PLAYERA_VISITA_REP_P3697_A24__28309.1718921154.jpg?c=1" style="border: 3px solid #ff0000; border-radius: 15px; box-shadow: 0 4px 20px rgba(255, 0, 0, 0.6); transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; width: 100%; max-width: 300px; height: auto;">
+        <h3>JERSEY CHIVAS VISITA RÉPLICA AP24</h3>
+        <p>
+          Puma<br>
+          $1,799.00<br>
+        <strong>Ancho:</strong> 28.00 (cm)<br>
+        <strong>Altura:</strong> 1.00 (cm)<br>
+        <strong>Profundidad:</strong> 27.00 (cm)
+        </p>
+    </div>
+
+    <div class="feature" style="text-align: center;">
+        <img src="https://cdn11.bigcommerce.com/s-f13ae7le0r/images/stencil/1280x1280/products/1320/3013/JERSEY_ALTERNATIVO_PROMO_P6399_C25__46897.1732571029.jpg?c=1" style="border: 3px solid #ff0000; border-radius: 15px; box-shadow: 0 4px 20px rgba(255, 0, 0, 0.6); transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; width: 100%; max-width: 300px; height: auto;">
+        <h3>JERSEY ALTERNATIVO PROMO CL25</h3>
+        <p>
+          Puma<br>
+          $2,699.00<br>
+        <strong>Ancho:</strong> 28.00 (cm)<br>
+        <strong>Altura:</strong> 1.00 (cm)<br>
+        <strong>Profundidad:</strong> 27.00 (cm)
+        </p>
+    </div>
+</section>
+
+
+    <!-- Contact Section -->
+   <!-- Footer -->
+<footer>
+    <!-- Subscription Section -->
+    <div class="subscription-section">
+        <h2>MANTENTE AL TANTO DE LAS NOVEDADES DE CHIVAS</h2>
+        <p>Únete a nuestra lista de correos para recibir noticias sobre nuevos productos, promociones exclusivas y recibir un <span>10% de descuento en tu primera compra</span>.</p>
+        <input type="email" placeholder="Dirección de correo electrónico">
+        <button>ENVIAR</button>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer-container">
+        <!-- Left Section -->
+        <div class="footer-left">
+            <img src="https://logodownload.org/wp-content/uploads/2020/06/chivas-guadalajara-logo.png" alt="Logo Chivas">
+            <p>Sede central: Guadalajara, Jalisco, México.</p>
+            <p>Teléfono: 33 1234 5678</p>
+            <p><a href="mailto:ventas@chivasstore.com" style="color: #F6937A;">ventas@chivasstore.com</a></p>
+        </div>
+
+        <!-- Links Section -->
+        <div class="footer-links">
+        <br>
+            <h3>Acerca de Nosotros</h3>
+            <ul>
+                <li><a href="#">Historia de Chivas</a></li>
+                <li><a href="#">Productos Oficiales</a></li>
+                <li><a href="#">Contáctanos</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-links">
+        <br>
+            <h3>Información</h3>
+            <ul>
+                <li><a href="#">Envíos</a></li>
+                <li><a href="#">Política de Privacidad</a></li>
+                <li><a href="#">Términos y Condiciones</a></li>
+            </ul>
+        </div>
+    </div>
+
+   <!-- Bottom Section -->
+<div class="footer-bottom">
+    <div class="social-icons" style="text-align: center; padding: 20px;">
+        <a href="#" style="margin: 0 10px; display: inline-block;">
+            <img src="https://i.pinimg.com/736x/25/ea/59/25ea5941311b06c6cec08f99bf5d72a5.jpg" alt="Facebook" style="width: 30px; height: 30px; transition: transform 0.3s ease;">
+        </a>
+        <a href="#" style="margin: 0 10px; display: inline-block;">
+            <img src="https://i.pinimg.com/736x/f4/1e/2d/f41e2dab621c1ee5253cef74e3642fcf.jpg" alt="Instagram" style="width: 30px; height: 30px; transition: transform 0.3s ease;">
+        </a>
+        <a href="#" style="margin: 0 10px; display: inline-block;">
+            <img src="https://i.pinimg.com/736x/b2/68/83/b268838fe5a0c0ca504c2fc103843ae3.jpg" alt="Twitter" style="width: 30px; height: 30px; transition: transform 0.3s ease;">
+        </a>
+        <a href="#" style="margin: 0 10px; display: inline-block;">
+            <img src="https://i.pinimg.com/736x/3d/c2/86/3dc286aa8881c5c3f944f86ef3182223.jpg" alt="YouTube" style="width: 30px; height: 30px; transition: transform 0.3s ease;">
+        </a>
+    </div>
+</div>
+</footer>
+
+<p>&copy; 2024 CHIVAS. Todos los derechos reservados.</p>
+
+</body>
+</html>
